@@ -51,6 +51,16 @@
                         </arguments>
                     </block>
                 </block>
+                <block name="devdashboard.widget.exceptionReports" template="Firegento_DevDashboard::widget.phtml">
+                    <arguments>
+                        <argument name="title" xsi:type="string">Exception Reports</argument>
+                    </arguments>
+                    <block class="Hyva\Admin\Block\Adminhtml\HyvaGrid" name="devdashboard.exceptionReports">
+                        <arguments>
+                            <argument name="grid_name" xsi:type="string">dashboard_exception_reports</argument>
+                        </arguments>
+                    </block>
+                </block>
                 <referenceBlock name="adminhtml.cache.massaction">
                     <arguments>
                         <argument name="options" xsi:type="array">

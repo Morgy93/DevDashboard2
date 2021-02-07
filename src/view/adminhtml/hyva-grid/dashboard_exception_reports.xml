@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<grid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Hyva_Admin:etc/hyva-grid.xsd">
+    <source>
+        <arrayProvider>\Firegento\DevDashboard\ViewModel\Widget\ExceptionReports</arrayProvider>
+    </source>
+    <columns rowAction="show">
+        <include>
+            <column name="text" label="Report No." />
+            <column name="mod_date" label="Time" type="datetime" />
+            <column name="permissions" initiallyHidden="true" />
+            <column name="owner" initiallyHidden="true" />
+            <column name="size" initiallyHidden="true" />
+        </include>
+    </columns>
+    <actions idColumn="text">
+        <action id="show" label="Show" url="*/report/show" />
+    </actions>
+    <navigation>
+        <sorting>
+            <defaultSortByColumn>mod_date</defaultSortByColumn>
+            <defaultSortDirection>desc</defaultSortDirection>
+        </sorting>
+        <filters>
+            <filter column="text"/>
+            <filter column="mod_date"/>
+            <filter column="activity"/>
+        </filters>
+    </navigation>
+</grid>
